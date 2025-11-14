@@ -10,7 +10,6 @@ def clear() -> None:
 
 class Game:
     def __init__(self):
-        self.tries = []
         self.word = ""
         self.random_word()
 
@@ -128,7 +127,6 @@ class Game:
             clear()
             print(f"Welcome to {Color.GREEN}Wordle{Color.OFF}!")
             self.show_keyboard()
-
             self.display_attempts()
 
             attempt = self.take_attempt().upper()
