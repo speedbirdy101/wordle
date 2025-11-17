@@ -69,10 +69,11 @@ class Game:
             if char not in self.word:
                 if char in self.characters:
                     # Make it grey
-                    # self.characters[char] = Color.GREY
+                    self.characters[char] = Color.GREY
 
-                    self.characters.pop(char)
-                    self.keyboard_bar_len = len(self.characters) * 2
+                    # We do not want to delete it from the keyboard anymore
+                    # self.characters.pop(char)
+                    # self.keyboard_bar_len = len(self.characters) * 2
 
             elif index == self.word.index(char):
                 self.characters[char] = Color.GREEN
